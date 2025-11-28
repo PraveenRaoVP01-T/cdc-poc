@@ -8,21 +8,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-debezium:
-  postgres:
-    hostname: localhost
-    port: 5432
-    user: postgres
-    password: root
-    dbname: cdc_db
-    server:
-      id: 85744
-      name: pgserver1
-    plugin:
-      name: pgoutput
-    table:
-      include:
-        list: public.users
-    slot:
-      name: debezium_slot
